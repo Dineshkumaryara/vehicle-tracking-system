@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Vehicle Tracking</display-name>
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>com.pranitha.servlets.SignUpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/SignUpServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignInServlet</servlet-name>
+        <servlet-class>com.pranitha.servlets.SignInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignInServlet</servlet-name>
+        <url-pattern>/SignInServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>StoreLocationServlet</servlet-name>
+        <servlet-class>com.pranitha.servlets.StoreLocationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StoreLocationServlet</servlet-name>
+        <url-pattern>/StoreLocationServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.pranitha.servlets.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/HomeServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+        <url-pattern>*.jsf</url-pattern>
+    </servlet-mapping>
+</web-app>
